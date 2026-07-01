@@ -1,0 +1,36 @@
+{
+  "name": "transcript-to-vocab",
+  "displayName": "Transcript to Vocab",
+  "description": "Podcast transcript JSON dosyalarını English vocabulary learning materyaline dönüştürür. Her keyword için definition'ını, definition'daki örnek cümleyi ve fullText'ten alınan anlamlı örnek cümleleri TXT dosyaları olarak kaydeder. İlişkili keywords'leri context window'da otomatik olarak tespit eder ve ekler.",
+  "author": "User",
+  "version": "1.0.0",
+  "type": "command",
+  "runtime": "powershell",
+  "entrypoint": "main.ps1",
+  "parameters": [
+    {
+      "name": "inputFolder",
+      "displayName": "Input Folder",
+      "type": "string",
+      "default": "cleaned_transcripts",
+      "description": "JSON dosyalarının bulunduğu klasör yolu"
+    },
+    {
+      "name": "jsonFile",
+      "displayName": "JSON File (Optional)",
+      "type": "string",
+      "default": "",
+      "description": "Belirli bir JSON dosyasını işlemek için dosya adı (örn: 2494.json). Boş bırakılırsa tüm JSON dosyaları işlenir."
+    }
+  ],
+  "capabilities": [
+    "file:read",
+    "file:write"
+  ],
+  "tags": [
+    "english-learning",
+    "vocabulary",
+    "transcript",
+    "language-learning"
+  ]
+}
